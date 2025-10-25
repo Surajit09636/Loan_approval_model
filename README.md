@@ -32,14 +32,23 @@ This structure outputs a probability score representing the likelihood of loan a
 ## 📁 Project Structure
 
 ```
-.
-├── loan_nn_model_gpu.pth           # Trained model checkpoint
-├── loan_applications.xlsx          # Input data file
-├── loan_applications_result.xlsx   # Output predictions
-├── loan_predict.py                 # Main prediction script
-├── freeze_requirements.py          # Script to export dependencies
-├── requirements.txt                # List of dependencies
-└── README.md                       # Project documentation
+LOAN_APPROVAL/
+├── .dist/                         # Distribution or build artifacts
+├── data/                          # Raw or processed data files
+├── Loan/                          # Core loan-related modules
+├── models/                        # Trained models and architectures
+├── output_data/                   # Generated results or outputs
+│
+├── .gitignore                     # Git ignore file
+├── loan_approval.ipynb            # Main notebook for model training/evaluation
+├── nn_model.ipynb                 # Neural network model development notebook
+├── nn_run_model.py                # Script to run the trained neural network model
+├── run_model.py                   # Prediction or model execution script
+├── xcel_file_test.py              # Excel file testing and validation script
+│
+├── requirements.txt               # List of dependencies
+└── README.md                      # Project documentation
+                      # Project documentation
 ```
 
 ---
@@ -104,7 +113,7 @@ python loan_predict.py
 ```
 
 It will:
-- Load your model (`loan_nn_model_gpu.pth`)
+- Load your model (`./data/loan_nn_model_gpu.pth`)
 - Process `loan_applications.xlsx`
 - Generate approval predictions
 - Save results to `loan_applications_result.xlsx`
