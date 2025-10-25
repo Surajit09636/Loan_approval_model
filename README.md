@@ -109,7 +109,7 @@ Example:
 
 Run the main script:
 ```bash
-python loan_predict.py
+python xcel_file_test.py
 ```
 
 It will:
